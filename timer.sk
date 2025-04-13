@@ -1,0 +1,66 @@
+# Stoppuhr-Skript in Sekunden
+options:
+    timer-duration: 0 # Startdauer in Sekunden
+    timer-active: false # Timer ist zu Beginn nicht aktiv
+
+# Stoppuhr starten
+command /starttimer:
+    trigger:
+        set {timer-active} to true
+        set {timer-duration} to 0 # Setze die Stoppuhr auf 0
+        send "&aStoppuhr gestartet!" to player
+        loop all players:
+            send actionbar "&7Stoppuhr: &b0s" to loop-player
+
+# Timer hochzählen
+every 1 second:
+    if {timer-active} is true:
+        # Timer hochzählen
+        add 1 to {timer-duration}
+        
+        # Zeige die Zeit nur in Sekunden
+        loop all players:
+            send actionbar "&7Stoppuhr: &b%{timer-duration}%s" to loop-player
+
+# Stoppuhr stoppen
+command /stoptimer:
+    trigger:
+        if {timer-active} is true:
+            set {timer-active} to false
+            send "&cStoppuhr gestoppt!" to player
+            loop all players:
+                send actionbar "&cStoppuhr gestoppt!" to loop-player
+        else:
+            send "&cKeine aktive Stoppuhr!" to player
+
+# Umrechnen von Sekunden in Stunden, Minuten und Sekunden
+command /umrechnen:
+    trigger:
+        if {timer-duration} > 0:
+            # Stunden berechnen
+            set {_hours} to floor({timer-duration}/3600)
+            set {_remaining} to {timer-duration}-({_hours}*3600)
+            
+            # Minuten berechnen
+            set {_minutes} to floor({_remaining}/60)
+            
+            # Sekunden berechnen
+            set {_seconds} to {_remaining}-({_minutes}*60)
+            
+            # Ausgabe formatieren
+            send "&eZeitumrechnung:" to player
+            send "&6%{_hours}% Stunde(n)" to player
+            send "&6%{_minutes}% Minute(n)" to player
+            send "&6%{_seconds}% Sekunde(n)" to player
+            send "&7Gesamt: &b%{timer-duration}% Sekunden" to player
+        else:
+            send "&cDie Stoppuhr hat noch nicht begonnen!" to player
+
+# Stoppuhr zurücksetzen
+command /resettimer:
+    trigger:
+        set {timer-active} to false
+        set {timer-duration} to 0
+        send "&eStoppuhr wurde zurückgesetzt!" to player
+        loop all players:
+            send actionbar "&7Stoppuhr zurückgesetzt" to loop-player
