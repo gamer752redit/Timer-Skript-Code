@@ -1,42 +1,106 @@
-1. lade dir das skript runter
-    - das skript findest du auch hier im github
+⏱️ Timer-Skript Installation
+━━━━━━━━━━━━━━━━━━━━━━━
 
-2. lade dir das plugin "Skript" herunter
-    - https://www.spigotmc.org/resources/skript.114544/
+✅ Deutsche Version
+1. 📥 Skript herunterladen
 
-3. starte deinen server
+Hol dir timer.sk von unserem GitHub-Repository
 
-4. zihe das heruntergeladene skript (timer.sk) in das plugin
-    -plugins > Skript > scripts > timer.sk
+2. ⚙️ Voraussetzungen
 
-5. reloade dein Skript damit du direkt loslegen kannst!
-    - /skript reload monster timer.sk
+Installiere Skript
 
-6. nutze diese commands: /starttimer - /stoptimer - /umrechnen - /resettimer
+➡️ Im plugins-Ordner ablegen
 
-7. Viel Spass beim testen!
+3. 🚀 Server starten
 
-   ⚠️ BITTE GEBE DAS SKRIPT NICHT ALS DEINS AUS ⚠️
+Warte auf vollständige Initialisierung
 
+4. 📂 Skript installieren
 
+markdown
+plugins/
+└── Skript/
+    └── scripts/
+        └── timer.sk  ← Hier einfügen
+5. 🔄 Aktivierung
 
+bash
+/skript reload timer.sk
+6. 🎮 Verfügbare Befehle
 
-1. Download the script
-- You can also find the script here on GitHub
+bash
+/starttimer   # Startet den Timer
+/stoptimer    # Stoppt den Timer
+/umrechnen    # Konvertiert Zeiten
+/resettimer   # Setzt Timer zurück
+⚠️ Wichtige Hinweise
 
-2. Download the "Script" plugin
-- https://www.spigotmc.org/resources/skript.114544/
+🔄 Nach Updates immer neu laden
 
-3. Start your server
+❌ Keine Weitergabe ohne Credit
 
-4. Drag the downloaded script (timer.sk) into the plugin
-- plugins > Script > scripts > timer.sk
+✔️ Getestet mit Skript 2.6+
 
-5. Reload your script so you can get started right away!
-- /script reload monster timer.sk
+💡 Tipps für Admins
 
-6. Use these commands: /starttimer - /stoptimer - /umrechnen - /resettimer
+Nutze /timer help für Hilfe
 
-7. Have fun testing!
+Timer laufen serverweit
 
-⚠️ PLEASE DO NOT PASS THE SCRIPT AS YOURS ⚠️
+Backup vor Updates erstellen
+
+━━━━━━━━━━━━━━━━━━━━━━━
+
+🇬🇧 English Version
+1. 📥 Download Script
+
+Get timer.sk from our GitHub
+
+2. ⚙️ Requirements
+
+Install Skript
+
+➡️ Place in plugins folder
+
+3. 🚀 Start Server
+
+Wait for complete startup
+
+4. 📂 Install Script
+
+markdown
+plugins/
+└── Skript/
+    └── scripts/
+        └── timer.sk  ← Place here
+5. 🔄 Activation
+
+bash
+/skript reload timer.sk
+6. 🎮 Available Commands
+
+bash
+/starttimer   # Starts the timer
+/stoptimer    # Stops the timer
+/umrechnen    # Converts time units
+/resettimer   # Resets the timer
+⚠️ Important Notes
+
+🔄 Reload after updates
+
+❌ Don't redistribute without credit
+
+✔️ Tested with Skript 2.6+
+
+💡 Pro Tips
+
+Use /timer help for assistance
+
+Timers are server-wide
+
+Always backup before updates
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✨ Viel Erfolg mit deinem Timer-System!
+(Happy timing!)
